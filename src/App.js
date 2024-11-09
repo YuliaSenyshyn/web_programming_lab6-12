@@ -1,12 +1,12 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
-import Header from './components/Header/header';
-import Home from './components/Home/Home';
-import Catalog from './components/Catalog/catalog';
-import Item from './components/Item/Item';
-import Footer from './components/Footer/footer'; 
-import { BookProvider } from './components/BookContext';
+import Header from './components/Header/header.js';
+import Home from './components/Home/Home.js';
+import Catalog from './components/Catalog/catalog.jsx';
+import Item from './components/Item/Item.js';
+import Footer from './components/Footer/footer.js'; 
+import { BookProvider } from './components/BookContext.js';
 
 const Cart = () => {
   return (

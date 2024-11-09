@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css'; 
 import BooksImage from './bookss.avif';
-import Books from '../Books/Books'; 
+import Books from '../Books/Books.js'; 
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 // src/components/Item/Item.js
 import React, { useState, useContext } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { BookContext } from '../BookContext';
+import { BookContext } from '../BookContext.js';
 import './Item.css';
 
 const Item = () => {

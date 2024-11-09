@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { initialBooksData } from '../utils/BooksData';
+import { initialBooksData } from '../utils/BooksData.js';
+import {getBooks} from '../api.js'
 
 export const BookContext = createContext();
 
@@ -9,9 +10,9 @@ export const BookProvider = ({ children }) => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('http://localhost:3000/catalog');
-        const data = await response.json();
-        setBooks(data); 
+        const response = await getBooks();
+        console.log("response: ", response);
+        setBooks(response); 
       } catch (error) {
         console.error('Error fetching books:', error);
       }

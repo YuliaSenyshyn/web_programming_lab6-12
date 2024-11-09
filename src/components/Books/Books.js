@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../BooksList/Books.css'; 
-import booksData from '../BooksList/BooksList'; 
+import booksData from '../BooksList/BooksList.js'; 
 
 const Books = () => {
   const [visibleBooks, setVisibleBooks] = useState(4); 
@@ -26,7 +26,7 @@ const Books = () => {
           <div key={book.id} className="book">
             <Link to={`/item/${book.id}`} className="book-link">
               <div className="book-image">
-                <img src={book.image} alt={book.title} />
+                <img src={book.imageUrl} alt={book.title} />
               </div>
               <h3>{book.title}</h3>
               <p>{book.description}</p>
